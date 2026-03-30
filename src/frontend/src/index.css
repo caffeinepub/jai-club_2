@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark theme as default */
+    --background: 0.13 0.01 240;
+    --foreground: 0.97 0 0;
+    --card: 0.16 0.012 240;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.16 0.012 240;
+    --popover-foreground: 0.97 0 0;
+    /* primary = orange/gold accent */
+    --primary: 0.72 0.18 52;
+    --primary-foreground: 0.13 0.01 240;
+    /* secondary = red CTA */
+    --secondary: 0.58 0.23 25;
+    --secondary-foreground: 0.97 0 0;
+    --muted: 0.22 0.01 240;
+    --muted-foreground: 0.7 0.01 240;
+    --accent: 0.72 0.18 52;
+    --accent-foreground: 0.13 0.01 240;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.3 0.02 240;
+    --input: 0.22 0.01 240;
+    --ring: 0.72 0.18 52;
+    --chart-1: 0.72 0.18 52;
+    --chart-2: 0.58 0.23 25;
+    --chart-3: 0.6 0.18 200;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.13 0.01 240;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.72 0.18 52;
+    --sidebar-primary-foreground: 0.13 0.01 240;
+    --sidebar-accent: 0.22 0.01 240;
+    --sidebar-accent-foreground: 0.97 0 0;
+    --sidebar-border: 0.3 0.02 240;
+    --sidebar-ring: 0.72 0.18 52;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* Custom utilities */
+.text-gold {
+  color: oklch(0.72 0.18 52);
+}
+.text-gold-bright {
+  color: oklch(0.8 0.2 52);
+}
+.text-red-accent {
+  color: oklch(0.58 0.23 25);
+}
+.bg-gold {
+  background-color: oklch(0.72 0.18 52);
+}
+.bg-dark-panel {
+  background-color: oklch(0.16 0.012 240);
+}
+.bg-darker-panel {
+  background-color: oklch(0.14 0.01 240);
+}
+.border-gold {
+  border-color: oklch(0.72 0.18 52);
+}
+.glow-gold {
+  box-shadow: 0 0 20px oklch(0.72 0.18 52 / 0.4), 0 0 60px
+    oklch(0.72 0.18 52 / 0.15);
+}
+.glow-red {
+  box-shadow: 0 0 20px oklch(0.58 0.23 25 / 0.5), 0 0 60px
+    oklch(0.58 0.23 25 / 0.2);
+}
+.gradient-cta {
+  background: linear-gradient(135deg, oklch(0.58 0.23 25), oklch(0.72 0.18 52));
+}
+.gradient-hero-bg {
+  background: radial-gradient(
+      ellipse at 70% 50%,
+      oklch(0.72 0.18 52 / 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 30% 80%,
+      oklch(0.58 0.23 25 / 0.06) 0%,
+      transparent 50%
+    ),
+    linear-gradient(160deg, oklch(0.13 0.01 240) 0%, oklch(0.1 0.005 240) 100%);
+}
+.card-glow {
+  box-shadow: 0 0 0 1px oklch(0.72 0.18 52 / 0.3), 0 0 30px
+    oklch(0.72 0.18 52 / 0.1);
+}
